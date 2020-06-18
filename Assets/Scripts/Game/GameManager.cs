@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace SpeedTime.Game
 {
@@ -8,6 +9,8 @@ namespace SpeedTime.Game
         public static GameManager Instance { get; set; }
         [SerializeField] private GameObject _gameOverCanvas = null;
         [SerializeField] private AudioSource _musicSource = null;
+        [SerializeField] private GameObject _pauseBtn = null;
+        [SerializeField] private GameObject _playBtn = null;
 
         private void Awake()
         {
@@ -25,6 +28,22 @@ namespace SpeedTime.Game
         public void ReloadScene()
         {
             SceneManager.LoadScene(0);
+        }
+
+        public void PauseGame(bool isPause)
+        {
+            if(isPause)
+            {
+                _musicSource.Pause();
+                Time.timeScale = 0;
+            }
+            else
+            {
+                _musicSource.UnPause();
+                Time.timeScale = 1;
+            }
+            _pauseBtn.SetActive(!isPause);
+            _playBtn.SetActive(isPause);
         }
     }
 }
