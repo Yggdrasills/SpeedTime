@@ -22,6 +22,10 @@ namespace SpeedTime.Game
 
         private void Update()
         {
+#if UNITY_EDITOR
+            if(Input.GetKeyDown(KeyCode.A)) ChangePosition(-1);
+            else if(Input.GetKeyDown(KeyCode.D)) ChangePosition(1);
+#endif
             if (Input.touchCount <= 0) return;
 
             var touch = Input.GetTouch(0);

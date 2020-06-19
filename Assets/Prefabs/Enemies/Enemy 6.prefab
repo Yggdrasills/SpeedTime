@@ -75,7 +75,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: f295f5c82b2e5f84badf0b227afa93a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 10.8, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1906ecf333bb7824f931adf8989a22be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: -30
+  _speed: -45
 --- !u!70 &3198158726364513720
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

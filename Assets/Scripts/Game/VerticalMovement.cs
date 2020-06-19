@@ -4,7 +4,7 @@ namespace SpeedTime.Game
 {
     public class VerticalMovement : MonoBehaviour
     {
-        [SerializeField, Range(-50, 50)] private float _speed = 20;
+        [SerializeField, Range(-80, 80)] private float _speed = 20;
 
         private void Update()
         {
